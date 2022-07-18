@@ -1,7 +1,8 @@
     
         var selectedRow=null;
         let onFromSubmit=()=>{
-            var formData=readFromData();
+            
+            let formData=readFromData();
             if(selectedRow==null)
             insertNewRecord(formData);
             else
@@ -11,7 +12,7 @@
 
         }
         let readFromData=()=>{
-            var formData={};
+            let formData={};
             formData["fname"]=document.getElementById("fName").value;
             formData["lname"]=document.getElementById("lName").value;
             formData["gender"]=document.querySelectorAll("input[name='gender']:checked")[0].value;
@@ -34,8 +35,8 @@
             
         }
         let insertNewRecord=(data)=>{
-            var table=document.getElementById("employeeList").getElementsByTagName("tbody")[0];
-            var newRow=table.insertRow(table.legth);
+            let table=document.getElementById("employeeList").getElementsByTagName("tbody")[0];
+            let newRow=table.insertRow(table.legth);
             cell1=newRow.insertCell(0);
             cell1.innerHTML=data.fname;
 
