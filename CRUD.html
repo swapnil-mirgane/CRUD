@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./CRUD.js"></script>
+
+    <style>
+        .list{
+            
+        }
+        table{
+            margin: auto;
+        }
+        body{
+            background-color: rgb(196, 253, 168);
+        }
+    </style>
+</head>
+<body>
+    <table>
+                <form onsubmit="event.preventDefault(); onFromSubmit();" autocomplete="off">
+                    <div><tr>
+                        <td><label for="">FirstNmae</label></td>
+                        <td><input type="text" name="fname"id="fName" autofocus></td>
+                    </div>
+                    <div><tr>
+                        <td><label for="">lastNmae</label></td>
+                        <td><input type="text" name="lname"id="lName"></td>
+                    </div>
+                    <div>
+                        <tr>
+                        <td><label for="">Gender</label></td>
+                        <td><input type="radio" name="gender" id="gender" value="Male" checked> Male<input type="radio" name="gender" id="gender" value="Fmale">Fmale</td>
+                    </tr>
+                    </div>
+                    <div>
+                        <tr>
+                           <td> <label for="">Contact</label></td>
+                           <td><input type="number" name="contact" id="contact"></td>
+                        </tr>
+                        </div>
+                    <div>
+                    <tr>
+                       <td> <label for="">city</label></td>
+                       <td><input type="text" name="city" id="city"></td>
+                    </tr>
+                    </div>
+                    <div>
+                        <tr>
+                           <td> <label for="">Distric</label></td>
+                           <td><select name="state" id="state">
+                            <option value="Distric Not Selected">Select</option>
+                            <option value="Pune">pune</option>
+                            <option value="Solapur">Solapur</option>
+                            <option value="Nanded">Nanded</option>
+                            <option value="Satara">Satara</option>
+                           </select></td>
+                        </tr>
+                        </div>
+
+
+                    <div>
+                        <tr>
+                           <td> <label for="">Hobby</label></td>
+                           <td>
+                             <input type="checkbox" id="cricket" name="cricket" value="Cricket">Cricket
+                             <input type="checkbox" id="footbol" value="Footbol">Footbol
+                             <input type="checkbox" id="not" value="Footbol">Not interested
+
+                          </td>
+                        </tr>
+                        </div>
+
+                    <div><tr>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                    </div>
+                </form>
+    </table>
+    <div>
+        <table class="list" id="employeeList" border="1px">
+            <thead>
+                <tr>
+                    <th>FirstNmae</th>
+                    <th>LastNmae</th>
+                    <th>Gender</th>
+                    <th>Contact</th>
+                    <th>City</th>
+                    <th>Distric</th>
+                    <th>Hobby</th>
+                    <th><b> Edit  Delete</b></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
